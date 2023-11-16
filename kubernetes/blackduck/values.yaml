@@ -27,6 +27,16 @@ exposedServiceType: NodePort
 # custom port to expose the NodePort service on
 exposedNodePort: ""
 
+# Expose the webui as Ingress
+ingress:
+  enabled: false
+  annotations: {}
+  host: chart-example.local
+  tls: []
+  #  - secretName: chart-example-tls
+  #    host: chart-example.local
+  # ingressClassName:
+
 # enable Persistent Storage for containers
 enablePersistentStorage: true
 # it will apply to all PVC's storage class but it can be override at container level
